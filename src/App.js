@@ -14,8 +14,8 @@ function App() {
     <div>
       <Header />
       <Login />
-      {/* <Register /> */}
-      {/* <Cuisine /> */}
+      <Register />
+      <Cuisine />
       {/* <Home /> */}
       {/* <Test /> */}
 
