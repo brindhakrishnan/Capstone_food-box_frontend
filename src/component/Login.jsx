@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
+import AuthenticationService from './AuthenticationService';
 import './signin.css'
+
 
 export default class Login extends Component {
 
@@ -26,7 +28,9 @@ export default class Login extends Component {
         event.preventDefault();
         if (this.state.inputEmail === "jane.doe@gmail.com" && this.state.inputPassword === "welcomejane") {
         //    this.props.history.push(`/cuisine/${this.state.inputEmail}`);
-            this.props.history.push("/cuisine");
+            AuthenticationService.registerSuccessfulLogin(this.state.inputEmail,this.state.inputPassword);
+            this.props.history.push("/");
+            window.location.reload();
         }
 
     }

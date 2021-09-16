@@ -1,5 +1,6 @@
 import React from 'react'
 import './album.css'
+import { Link } from 'react-router-dom'
 
 export default function Home() {
     return (
@@ -10,46 +11,115 @@ export default function Home() {
                     <div className="container">
                         <h1 className="jumbotron-heading">Welcome to FoodBox!</h1>
                         <p className="lead text-muted">FoodBox is one of the leading food delivery services in our country. Stay home, stay safe, relax and order your favorite food in a few clicks. Save money with our best deals on every purchase! </p>
+                        {/* <p>
+                            <a href="#" className="btn btn-primary my-2">Main call to action</a>
+                            <a href="#" className="btn btn-secondary my-2">Secondary action</a>
+                        </p> */}
                     </div>
                 </section>
 
-                <div id="carouselExampleCaptions" className="carousel slide" data-bs-ride="carousel">
-                    <div className="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <div className="album py-5 bg-light">
+                    <div className="container">
+                        <div className="row">
+                            <div className="col-md-4">
+                                <Link to="/"><img src="./images/Cuisine_01_Indian.jpg" className="img-thumbnail" alt="Indian Cuisine" /></Link>
+                                <div className="card mb-4 box-shadow">
+                                    <div className="card-body">
+                                        <p className="card-text"><b>Indian Cuisine </b>- Explore our traditional and modern Indian dishes</p>
+                                        <div className="d-flex justify-content-between align-items-center">
+                                            {/* <div className="btn-group">
+                                                <button type="button" className="btn btn-sm btn-outline-secondary">View</button>
+                                                <button type="button" className="btn btn-sm btn-outline-secondary">Edit</button>
+                                                <button type="button" className="btn btn-sm btn-outline-secondary">Delete</button>
+                                            </div> */}
+                                            {/* <small className ="text-muted">9 mins</small> */}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-md-4">
+                                <div className="card mb-4 box-shadow">
+                                    <img src="./images/Cuisine_02_Mexican.jpg" className="img-thumbnail" alt="Mexican Cuisine" />
+                                    <div className="card-body">
+                                        <p className="card-text"><b>Mexican Cuisine </b>- Tacos, Nachos, Wraps and more...</p>
+                                        <div className="d-flex justify-content-between align-items-center">
+                                            {/* <div className="btn-group">
+                                                <button type="button" className="btn btn-sm btn-outline-secondary">View</button>
+                                                <button type="button" className="btn btn-sm btn-outline-secondary">Edit</button>
+                                                <button type="button" className="btn btn-sm btn-outline-secondary">Delete</button>
+                                            </div> */}
+                                            {/* <small className ="text-muted">9 mins</small> */}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-md-4">
+                                <div className="card mb-4 box-shadow">
+                                    <img src="./images/Cuisine_03_Italian.png" className="img-thumbnail" alt="Italian Cuisine" />
+                                    <div className="card-body">
+                                        <p className="card-text"><b>Italian Cuisine </b>- Oven baked Pizzas, Pastas, Lasagnas and more...</p>
+                                        <div className="d-flex justify-content-between align-items-center">
+                                            {/* <div className="btn-group">
+                                                <button type="button" className="btn btn-sm btn-outline-secondary">View</button>
+                                                <button type="button" className="btn btn-sm btn-outline-secondary">Edit</button>
+                                                <button type="button" className="btn btn-sm btn-outline-secondary">Delete</button>
+                                            </div> */}
+                                            {/* <small className ="text-muted">9 mins</small> */}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="col-md-4">
+                                <div className="card mb-4 box-shadow">
+                                    <img src="./images/Cuisine_04_Chinese.jpg" className="img-thumbnail" alt="Chinese Cuisine" />
+                                    <div className="card-body">
+                                        <p className="card-text"><b>Chinese Cuisine </b>- Noodles, manchurian, soups, wontons and more...</p>
+                                        <div className="d-flex justify-content-between align-items-center">
+                                            {/* <div className="btn-group">
+                                                <button type="button" className="btn btn-sm btn-outline-secondary">View</button>
+                                                <button type="button" className="btn btn-sm btn-outline-secondary">Edit</button>
+                                                <button type="button" className="btn btn-sm btn-outline-secondary">Delete</button>
+                                            </div> */}
+                                            {/* <small className ="text-muted">9 mins</small> */}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-md-4">
+                                <div className="card mb-4 box-shadow">
+                                    <img src="./images/Cuisine_05_Continental.png" className="img-thumbnail" alt="Continental Cuisine" />
+                                    <div className="card-body">
+                                        <p className="card-text"><b>Continental Cuisine </b>- Salads, Burgers, French fries, Pies and more...</p>
+                                        <div className="d-flex justify-content-between align-items-center">
+                                            {/* <div className="btn-group">
+                                                <button type="button" className="btn btn-sm btn-outline-secondary">View</button>
+                                                <button type="button" className="btn btn-sm btn-outline-secondary">Edit</button>
+                                                <button type="button" className="btn btn-sm btn-outline-secondary">Delete</button>
+                                            </div> */}
+                                            {/* <small className ="text-muted">9 mins</small> */}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-md-4">
+                                <div className="card mb-4 box-shadow">
+                                    <img src="./images/Cuisine_06_MiddleEastern.jpg" className="img-thumbnail" alt="Middle Eastern Cuisine" />
+                                    <div className="card-body">
+                                        <p className="card-text"><b>Middle Eastern Cuisine </b>- Pita, Hummus, Falafels, Manakeesh and more...</p>
+                                        <div className="d-flex justify-content-between align-items-center">
+                                            {/* <div className="btn-group">
+                                                <button type="button" className="btn btn-sm btn-outline-secondary">View</button>
+                                                <button type="button" className="btn btn-sm btn-outline-secondary">Edit</button>
+                                                <button type="button" className="btn btn-sm btn-outline-secondary">Delete</button>
+                                            </div> */}
+                                            {/* <small className ="text-muted">9 mins</small> */}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div className="carousel-inner">
-                        <div className="carousel-item active">
-                            <img src="../public/images/Cuisine_05_Continental.png" className="d-block w-100" alt="Continental Cuisine"/>
-                            <div className ="carousel-caption d-none d-md-block">
-                            <h5>First slide label</h5>
-                            <p>Some representative placeholder content for the first slide.</p>
-                            </div>
-                        </div>
-                        <div className="carousel-item">
-                            <img src="..." className="d-block w-100" alt="..."/>
-                            <div className ="carousel-caption d-none d-md-block">
-                            <h5>Second slide label</h5>
-                            <p>Some representative placeholder content for the second slide.</p>
-                            </div>
-                        </div>
-                        <div className="carousel-item">
-                            <img src="..." className="d-block w-100" alt="..."/>
-                            <div className ="carousel-caption d-none d-md-block">
-                            <h5>Third slide label</h5>
-                            <p>Some representative placeholder content for the third slide.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-                        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span className="visually-hidden">Previous</span>
-                    </button>
-                    <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-                        <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span className="visually-hidden">Next</span>
-                    </button>
                 </div>
 
             </main>

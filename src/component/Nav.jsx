@@ -1,7 +1,11 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
+import AuthenticationService from './AuthenticationService'
 
 export default function Nav() {
+
+    const isUserLoggedIn = AuthenticationService.isUserLoggedIn();
+    console.log("Value of isUserLoggedIn " + isUserLoggedIn)
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
             <a className="navbar-brand" href="#">
@@ -13,13 +17,13 @@ export default function Nav() {
                         <NavLink className="nav-link" to="/" exact>Home <span className="sr-only">(current)</span></NavLink>
                     </li>
                     <li className="nav-item">
-                        <NavLink className="nav-link" to="/cuisine">Cuisines</NavLink>
+                        {isUserLoggedIn && <NavLink className="nav-link" to="/cuisine">Cuisines</NavLink>}
                     </li>
                     <li className="nav-item">
-                        <NavLink className="nav-link" to="/menu">Menu</NavLink>
+                        {isUserLoggedIn && <NavLink className="nav-link" to="/offers">Offers</NavLink>}
                     </li>
                     <li className="nav-item">
-                        <NavLink className="nav-link" to="/offers">Offers</NavLink>
+                        {isUserLoggedIn && <NavLink className="nav-link" to="/orders">My Orders</NavLink>}
                     </li>
                     <li className="nav-item">
                         <NavLink className="nav-link" to="/help">Help</NavLink>
@@ -30,13 +34,23 @@ export default function Nav() {
                 </ul>
 
                 <ul className="navbar-nav navbar-collapse justify-content-end">
-                    <li className="nav-item">
-                        <NavLink className="nav-link" to="/login">Login</NavLink>
+                    <li>
+                        {isUserLoggedIn &&
+                            <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+                                <input type="search" class="form-control form-control-dark" placeholder="Search..." aria-label="Search" />
+                            </form>
+                        }
                     </li>
                     <li className="nav-item">
-                        <NavLink className="nav-link" to="/register">Register</NavLink>
+                        {!isUserLoggedIn && <NavLink className="nav-link" to="/login" onClick={AuthenticationService.registerSuccessfulLogin}>Login</NavLink>}
                     </li>
-                    
+                    <li className="nav-item">
+                        {isUserLoggedIn && <NavLink className="nav-link" to="/logout" onClick={AuthenticationService.logout}>Logout</NavLink>}
+                    </li>
+                    <li className="nav-item">
+                        {!isUserLoggedIn && <NavLink className="nav-link" to="/register">Register</NavLink>}
+                    </li>
+
 
                 </ul>
             </div>

@@ -27,7 +27,9 @@ export default function Cuisine() {
                                         <p className="card-text"><b>Indian Cuisine </b>- Explore our traditional and modern Indian dishes</p>
                                         <div className="d-flex justify-content-between align-items-center">
                                             <div className="btn-group">
-                                                <button type="button" className="btn btn-sm btn-outline-primary">View</button>
+                                                <button type="button" className="btn btn-sm btn-outline-secondary">View</button>
+                                                <button type="button" className="btn btn-sm btn-outline-secondary">Edit</button>
+                                                <button type="button" className="btn btn-sm btn-outline-secondary">Delete</button>
                                             </div>
                                             {/* <small className ="text-muted">9 mins</small> */}
                                         </div>
@@ -41,7 +43,9 @@ export default function Cuisine() {
                                         <p className="card-text"><b>Mexican Cuisine </b>- Tacos, Nachos, Wraps and more...</p>
                                         <div className="d-flex justify-content-between align-items-center">
                                             <div className="btn-group">
-                                            <button type="button" className="btn btn-sm btn-outline-primary">View</button>
+                                                <button type="button" className="btn btn-sm btn-outline-secondary">View</button>
+                                                <button type="button" className="btn btn-sm btn-outline-secondary">Edit</button>
+                                                <button type="button" className="btn btn-sm btn-outline-secondary">Delete</button>
                                             </div>
                                             {/* <small className ="text-muted">9 mins</small> */}
                                         </div>
@@ -55,7 +59,9 @@ export default function Cuisine() {
                                         <p className="card-text"><b>Italian Cuisine </b>- Oven baked Pizzas, Pastas, Lasagnas and more...</p>
                                         <div className="d-flex justify-content-between align-items-center">
                                             <div className="btn-group">
-                                            <button type="button" className="btn btn-sm btn-outline-primary">View</button>
+                                                <button type="button" className="btn btn-sm btn-outline-secondary">View</button>
+                                                <button type="button" className="btn btn-sm btn-outline-secondary">Edit</button>
+                                                <button type="button" className="btn btn-sm btn-outline-secondary">Delete</button>
                                             </div>
                                             {/* <small className ="text-muted">9 mins</small> */}
                                         </div>
@@ -70,7 +76,9 @@ export default function Cuisine() {
                                         <p className="card-text"><b>Chinese Cuisine </b>- Noodles, manchurian, soups, wontons and more...</p>
                                         <div className="d-flex justify-content-between align-items-center">
                                             <div className="btn-group">
-                                            <button type="button" className="btn btn-sm btn-outline-primary">View</button>
+                                                <button type="button" className="btn btn-sm btn-outline-secondary">View</button>
+                                                <button type="button" className="btn btn-sm btn-outline-secondary">Edit</button>
+                                                <button type="button" className="btn btn-sm btn-outline-secondary">Delete</button>
                                             </div>
                                             {/* <small className ="text-muted">9 mins</small> */}
                                         </div>
@@ -84,7 +92,9 @@ export default function Cuisine() {
                                         <p className="card-text"><b>Continental Cuisine </b>- Salads, Burgers, French fries, Pies and more...</p>
                                         <div className="d-flex justify-content-between align-items-center">
                                             <div className="btn-group">
-                                            <button type="button" className="btn btn-sm btn-outline-primary">View</button>
+                                                <button type="button" className="btn btn-sm btn-outline-secondary">View</button>
+                                                <button type="button" className="btn btn-sm btn-outline-secondary">Edit</button>
+                                                <button type="button" className="btn btn-sm btn-outline-secondary">Delete</button>
                                             </div>
                                             {/* <small className ="text-muted">9 mins</small> */}
                                         </div>
@@ -98,7 +108,9 @@ export default function Cuisine() {
                                         <p className="card-text"><b>Middle Eastern Cuisine </b>- Pita, Hummus, Falafels, Manakeesh and more...</p>
                                         <div className="d-flex justify-content-between align-items-center">
                                             <div className="btn-group">
-                                            <button type="button" className="btn btn-sm btn-outline-primary">View</button>
+                                                <button type="button" className="btn btn-sm btn-outline-secondary">View</button>
+                                                <button type="button" className="btn btn-sm btn-outline-secondary">Edit</button>
+                                                <button type="button" className="btn btn-sm btn-outline-secondary">Delete</button>
                                             </div>
                                             {/* <small className ="text-muted">9 mins</small> */}
                                         </div>

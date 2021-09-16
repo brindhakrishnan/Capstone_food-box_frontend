@@ -15,6 +15,11 @@ import Home from './component/Home';
 import Test from './component/Test';
 import { Carousel } from 'bootstrap';
 import IndianMenu from './component/IndianMenu';
+import Logout from './component/Logout';
+import AuthenticatedRoute from './component/AuthenticatedRoute.jsx'
+import Footer from './component/Footer.jsx'
+import About from './component/About'
+import Help from './component/Help'
 
 
 function App() {
@@ -23,16 +28,20 @@ function App() {
       <>
         <Header />
         <Switch>
-        <Route path="/" exact component={Cuisine} />
+        <Route path="/" exact component={Home} />
         <Route path="/login" component={Login}/>
         <Route path="/register" component={RegistrationForm} />
-        <Route path="/cuisine" exact component={Cuisine} />
-        <Route path="/IndianMenu" component={IndianMenu} />
-        <Route path="/home:name" component={Cuisine} />
+        <AuthenticatedRoute path="/home:name" component={Cuisine} />
+        <AuthenticatedRoute path="/cuisine" exact component={Cuisine} />
+        <AuthenticatedRoute path="/indianmenu" component={IndianMenu} />
+        <AuthenticatedRoute path="/logout" component={Logout} />
+        <Route path="/about" component={About} />
+        <Route path="/help" component={Help} />
         <Route component={Error} />
         {/* <Home /> */}
         {/* <Test /> */}
         </Switch>
+        <Footer/>
       </>
     </Router>
 
