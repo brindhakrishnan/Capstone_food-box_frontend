@@ -59,7 +59,7 @@ export default class Login extends Component {
                             <button className="btn btn-lg btn-primary" type="submit">Login</button>
                         </div>
                         <div className="row justify-content-md-center">
-                            <p> New user? Register <a href="#">here</a></p>
+                            <p> New user? Register <a href="/register">here</a></p>
                         </div>
 
                     </div>

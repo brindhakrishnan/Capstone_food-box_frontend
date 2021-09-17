@@ -1,7 +1,7 @@
 //import React from 'react'
 import React, { Component } from 'react'
 import './signin.css'
-import { addUser } from '../services/RegisterAPI'
+//import { addUser } from '../services/RegisterAPI'
 
 
 export default class RegistrationForm extends Component {

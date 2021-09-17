@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import './album.css'
-import IndianMenu from './IndianMenu'
+//import IndianMenu from './IndianMenu'
 
 export default function Cuisine() {
     return (

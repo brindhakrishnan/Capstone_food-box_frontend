@@ -8,9 +8,9 @@ export default function Nav() {
     console.log("Value of isUserLoggedIn " + isUserLoggedIn)
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a className="navbar-brand" href="#">
+            <NavLink className="navbar-brand" to="/">
                 <img src="./FoodBox_logo2.png" width="350" height="75" alt="" />
-            </a>
+            </NavLink>
             <div className="collapse navbar-collapse" id="navbarText">
                 <ul className="navbar-nav mr-auto">
                     <li className="nav-item active">
@@ -24,6 +24,9 @@ export default function Nav() {
                     </li>
                     <li className="nav-item">
                         {isUserLoggedIn && <NavLink className="nav-link" to="/orders">My Orders</NavLink>}
+                    </li>
+                    <li className="nav-item">
+                        {isUserLoggedIn && <NavLink className="nav-link" to="/users">Users</NavLink>}
                     </li>
                     <li className="nav-item">
                         <NavLink className="nav-link" to="/help">Help</NavLink>
