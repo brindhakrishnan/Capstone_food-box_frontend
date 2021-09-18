@@ -1,7 +1,7 @@
 //import React from 'react'
 import React, { Component } from 'react'
 import './signin.css'
-//import { addUser } from '../services/RegisterAPI'
+import UserAPI from '../services/UserAPI'
 
 
 export default class RegistrationForm extends Component {
@@ -10,7 +10,7 @@ export default class RegistrationForm extends Component {
     constructor(props){
         super(props);
         this.state = {
-        firstName: '', lastName: '', inputEmail: '', mobile: '', inputPassword: '', confirmPassword: ''
+        id: '', firstname: '', lastname: '', email: '', phone: '', password: '', accountstatus:1
         };
 
         this.handleChange = this.handleChange.bind(this);
@@ -30,10 +30,11 @@ export default class RegistrationForm extends Component {
         //create new user
         console.log(this.state);
         event.preventDefault();
-        alert('it works!');
-     //   this.props.addUser(this.state);
-        
+        // alert('it works!');
+        UserAPI.addUser(this.state)
+        .then(() => this.props.history.push('/login'))
         }
+  
 
 
     render() {
@@ -45,47 +46,47 @@ export default class RegistrationForm extends Component {
                     <div className="container">
                         <div className="row form-group">
                             <div className="col-2">
-                                <label htmlFor="firstName" className="col-form-label">First Name</label>
+                                <label htmlFor="firstname" className="col-form-label">First Name</label>
                             </div>
                             <div className="col-4">
-                                <input type="text" id="firstName" name="firstName" className="form-control" placeholder="First Name" required autofocus onChange={this.handleChange} value={this.state.firstName}/>
+                                <input type="text" id="firstname" name="firstname" className="form-control" placeholder="First Name" required autofocus onChange={this.handleChange} value={this.state.firstname}/>
                             </div>
                             <div className="col-2">
-                                <label htmlFor="lastName" className="col-form-label">Last Name</label>
+                                <label htmlFor="lastname" className="col-form-label">Last Name</label>
                             </div>
                             <div className="col-4">
-                                <input type="text" id="lastName" name="lastName" className="form-control" placeholder="Last Name" required onChange={this.handleChange} value={this.state.lastName} />
+                                <input type="text" id="lastname" name="lastname" className="form-control" placeholder="Last Name" required onChange={this.handleChange} value={this.state.lastname} />
                             </div>
                         </div>
 
                         <div className="row form-group">
                             <div className="col-2">
-                                <label htmlFor="inputEmail" className="col-form-label">Email address</label>
+                                <label htmlFor="email" className="col-form-label">Email address</label>
                             </div>
                             <div className="col-4">
-                                <input type="email" id="inputEmail" name="inputEmail" className="form-control" placeholder="Email address" required onChange={this.handleChange} value={this.state.inputEmail} />
+                                <input type="email" id="email" name="email" className="form-control" placeholder="Email address" required onChange={this.handleChange} value={this.state.email} />
                             </div>
                             <div className="col-2">
-                                <label htmlFor="mobile" className="col-form-label">Mobile Number</label>
+                                <label htmlFor="phone" className="col-form-label">Mobile Number</label>
                             </div>
                             <div className="col-4">
-                                <input type="text" id="mobile" name="mobile" className="form-control" placeholder="Mobile Number" required onChange={this.handleChange}  value={this.state.mobile} />
+                                <input type="text" id="phone" name="phone" className="form-control" placeholder="phone Number" required onChange={this.handleChange}  value={this.state.phone} />
                             </div>
                         </div>
 
                         <div className="row form-group">
                             <div className="col-2">
-                                <label htmlFor="inputPassword" className="col-form-label">Password</label>
+                                <label htmlFor="password" className="col-form-label">Password</label>
                             </div>
                             <div className="col-4">
-                                <input type="password" id="inputPassword" name="inputPassword" className="form-control" placeholder="Password" required onChange={this.handleChange} value={this.state.inputPassword} />
+                                <input type="password" id="password" name="password" className="form-control" placeholder="Password" required onChange={this.handleChange} value={this.state.password} />
                             </div>
-                            <div className="col-2">
+                            {/* <div className="col-2">
                                 <label htmlFor="confirmPassword" className="col-form-label">Confirm Password</label>
                             </div>
                             <div className="col-4">
                                 <input type="password" id="confirmPassword" name="confirmPassword" className="form-control" placeholder="Confirm Password" required onChange={this.handleChange} value={this.state.confirmPassword} />
-                            </div>
+                            </div> */}
                         </div>
                         <div className="row justify-content-md-center">
                             <div className="col-4">

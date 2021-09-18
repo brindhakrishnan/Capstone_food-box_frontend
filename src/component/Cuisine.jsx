@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import './album.css'
-//import IndianMenu from './IndianMenu'
 
 export default function Cuisine() {
     return (
@@ -21,7 +20,7 @@ export default function Cuisine() {
                     <div className="container">
                         <div className="row">
                             <div className="col-md-4">
-                                <Link to="/IndianMenu"><img src="./images/Cuisine_01_Indian.jpg" className="img-thumbnail" alt="Indian Cuisine" /></Link>
+                                <Link to="/menu"><img src="./images/Cuisine_01_Indian.jpg" className="img-thumbnail" alt="Indian Cuisine" /></Link>
                                 <div className="card mb-4 box-shadow">
                                     <div className="card-body">
                                         <p className="card-text"><b>Indian Cuisine </b>- Explore our traditional and modern Indian dishes</p>

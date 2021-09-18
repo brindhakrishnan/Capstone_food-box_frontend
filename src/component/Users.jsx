@@ -1,18 +1,20 @@
 import React, { Component } from 'react'
 import UserAPI from '../services/UserAPI'
-import AuthenticationService from './AuthenticationService'
+
 
 export default class Users extends Component {
 
     constructor(props) {
         super(props)
         this.retrieveUsers = this.retrieveUsers.bind(this)
+        this.deleteUserClicked = this.deleteUserClicked.bind(this)
+        this.updateUserClicked = this.updateUserClicked.bind(this)
+
         // this.handleSuccessResponse = this.handleSuccessResponse.bind(this)
         // this.handleError = this.handleError.bind(this)
         this.state = {
             users:
                 [
-                    // { id: 0, firstname: '', lastname: '', email: '', phone: '', password: '', accountstatus: 0 }
                 ],
             message: null
         }
@@ -38,19 +40,27 @@ export default class Users extends Component {
         //   .catch(error => this.handleError(error))
     }
 
+    deleteUserClicked(email) {
+        UserAPI.deleteUser(email)
+            .then(
+                response => {
+                    console.log(response);
+                    this.setState({ message: `Deletion of user ${email} successful` })
+                    this.retrieveUsers();
+                }
+            )
+        //   .catch(error => this.handleError(error))
+    }
+
+    updateUserClicked(email) {
+        console.log('update ' + email)
+        this.props.history.push(`/users/${email}`);
+    }
+
     render() {
         return (
             <div>
-                {/* <div>
-                    <p>This is the react user page.</p>
-                    Click here to get list of all users
-                    <button onClick={this.retrieveUsers} className="btn btn-lg btn-primary">Users</button>
-                    <button onClick={this.retrieveUserByEmail} className="btn btn-lg btn-primary">Users</button>
-                </div> */}
-                {/* // <div className="container">
-                //     {this.state.responsemessage}
-                // </div> */}
-
+                {this.state.message && <div className="alert alert-success">{this.state.message}</div>}
                 <div className="container">
                     <table className="table">
                         <thead>
@@ -72,8 +82,8 @@ export default class Users extends Component {
                                             <td>{user.email}</td>
                                             <td>{user.phone}</td>
                                             <td>{user.accountstatus}</td>
-                                            {/* <td><button className="btn btn-success" onClick={() => this.updateTodoClicked(todo.id)}>Update</button></td>
-                                            <td><button className="btn btn-warning" onClick={() => this.deleteTodoClicked(todo.id)}>Delete</button></td> */}
+                                            <td><button className="btn btn-success" onClick={() => this.updateUserClicked(user.email)}>Update</button></td>
+                                            <td><button className="btn btn-warning" onClick={() => this.deleteUserClicked(user.email)}>Delete</button></td>
                                         </tr>
                                 )
                             }
@@ -84,30 +94,5 @@ export default class Users extends Component {
         )
 
     }
-
-
-
-    // retrieveUserByEmail() {
-    //     UserAPI.executeUserByEmail("jane.doe@gmail.com")
-    //         //.then(response => console.log(response))
-    //         .then(response => this.handleSuccessResponse(response))
-    //         .catch(error => this.handleError(error))
-    // }
-
-    // handleSuccessResponse(response) {
-    //     this.setState({
-    //         id: response.data.id,
-    //         firstname: response.data.firstname,
-    //         lastname: response.data.lastname,
-    //         email: response.data.email,
-    //         phone: response.data.phone,
-    //         password: response.data.password,
-    //         accountstatus: response.data.accountstatus
-    //     })
-    // }
-
-    // handleError(error) {
-    //     console.log(error.response)
-    // }
 
 }
