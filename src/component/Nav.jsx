@@ -48,6 +48,9 @@ export default function Nav() {
                         {!isUserLoggedIn && <NavLink className="nav-link" to="/login" onClick={AuthenticationService.registerSuccessfulLogin}>Login</NavLink>}
                     </li>
                     <li className="nav-item">
+                        {isUserLoggedIn && <NavLink className="nav-link" to="/cart" >Cart</NavLink>}
+                    </li>
+                    <li className="nav-item">
                         {isUserLoggedIn && <NavLink className="nav-link" to="/logout" onClick={AuthenticationService.logout}>Logout</NavLink>}
                     </li>
                     <li className="nav-item">

@@ -1,6 +1,6 @@
 import React from 'react'
 import './album.css'
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 
 export default function Home() {
     return (
@@ -22,17 +22,19 @@ export default function Home() {
                     <div className="container">
                         <div className="row">
                             <div className="col-md-4">
-                                <Link to="/"><img src="./images/Cuisine_01_Indian.jpg" className="img-thumbnail" alt="Indian Cuisine" /></Link>
                                 <div className="card mb-4 box-shadow">
-                                    <div className="card-body">
-                                        <p className="card-text"><b>Indian Cuisine </b>- Explore our traditional and modern Indian dishes</p>
-                                        <div className="d-flex justify-content-between align-items-center">
-                                            {/* <div className="btn-group">
+                                    <img src="./images/Cuisine_01_Indian.jpg" className="img-thumbnail" alt="Indian Cuisine" />
+                                    <div className="card mb-4 box-shadow">
+                                        <div className="card-body">
+                                            <p className="card-text"><b>Indian Cuisine </b>- Explore our traditional and modern Indian dishes</p>
+                                            <div className="d-flex justify-content-between align-items-center">
+                                                {/* <div className="btn-group">
                                                 <button type="button" className="btn btn-sm btn-outline-secondary">View</button>
                                                 <button type="button" className="btn btn-sm btn-outline-secondary">Edit</button>
                                                 <button type="button" className="btn btn-sm btn-outline-secondary">Delete</button>
                                             </div> */}
-                                            {/* <small className ="text-muted">9 mins</small> */}
+                                                {/* <small className ="text-muted">9 mins</small> */}
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

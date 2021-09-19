@@ -1,20 +1,12 @@
 import { Form, Formik, Field, ErrorMessage } from 'formik'
 import React, { Component } from 'react'
 import UserAPI from '../services/UserAPI'
-import AuthenticationService from './AuthenticationService'
 
 export default class UserDetails extends Component {
 
     constructor(props) {
         super(props)
         this.state = {
-            // id: 4,
-            // firstname: 'Mike',
-            // lastname: 'Ross',
-            // email: 'mike.ross@gmail.com',
-            // phone: '8067549860',
-            // password: 'welcomeross',
-            // accountstatus: 1
             id: '',
             firstname: '',
             lastname: '',
@@ -25,7 +17,6 @@ export default class UserDetails extends Component {
         }
         this.onSubmit = this.onSubmit.bind(this)
         this.validate = this.validate.bind(this)
-
     }
 
     componentDidMount() {
