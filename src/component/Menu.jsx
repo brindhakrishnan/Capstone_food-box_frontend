@@ -1,9 +1,7 @@
 import React, { Component } from 'react'
 import MenuAPI from '../services/MenuAPI'
-// import Cart from './Cart.jsx'
 import AuthenticationService from './AuthenticationService.js'
 import CartAPI from '../services/CartAPI'
-// import { location } from "react-router-dom"
 
 export default class Menu extends Component {
 

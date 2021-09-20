@@ -5,9 +5,10 @@ import CartAPI from '../services/CartAPI'
 class Cart extends Component {
     constructor(props) {
         super(props)
-        this.deleteCartItems = this.deleteCartItems.bind(this)
+        //this.deleteCartItems = this.deleteCartItems.bind(this)
         this.calculateTotalAmount = this.calculateTotalAmount.bind(this)
         this.retrieveCart = this.retrieveCart.bind(this)
+        this.paymentPage = this.paymentPage.bind(this)
 
         this.state = {
             cart: [],
@@ -28,14 +29,6 @@ class Cart extends Component {
             .then(
                 response => {
                     console.log(response);
-                    // this.setState({
-                    //     id: response.data.id,
-                    //     email: response.data.email,
-                    //     menuName: response.data.menuname,
-                    //     amount: response.data.amount,
-                    //     totalAmount: response.data.totalamount,
-                    //     quantity: response.data.quantity
-                    // })
                     this.setState({ cart: response.data })
 
                 }
@@ -49,16 +42,12 @@ class Cart extends Component {
             cartitem => {
                 total = cartitem.totalAmount + total
             })
-
-            // const total=(this.state.data.reduce((total,currentItem) =>  total = total + currentItem.salary , 0 ));
-
-
-
         return total;
     }
-    deleteCartItems() {
 
-    }
+    paymentPage(){
+        this.props.history.push('/payment')    
+     }
 
     render() {
         return (
@@ -96,7 +85,7 @@ class Cart extends Component {
                         </tbody>
                         
                     </table>
-                    <button className="btn btn-success">Proceed to checkout</button>
+                    <button className="btn btn-success" onClick={this.paymentPage} >Proceed to checkout</button>
                 </div>
             </div>
         )

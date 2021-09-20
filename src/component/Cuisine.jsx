@@ -4,17 +4,14 @@ import './album.css'
 
 export default class Cuisine extends Component {
 
-    // constructor(props) {
-    //     super(props)
-    //     //  this.state = {selectedCuisine: '1' }
-    // }
-
     render() {
 
         return (
             <div>
                 <main role="main">
 
+                    <div>
+                    </div>
                     <div className="album py-5 bg-light">
                         <div className="container">
                             <div className="row">

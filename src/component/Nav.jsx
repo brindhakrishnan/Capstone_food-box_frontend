@@ -23,10 +23,16 @@ export default function Nav() {
                         {isUserLoggedIn && <NavLink className="nav-link" to="/offers">Offers</NavLink>}
                     </li>
                     <li className="nav-item">
-                        {isUserLoggedIn && <NavLink className="nav-link" to="/orders">My Orders</NavLink>}
+                        {isUserLoggedIn && <NavLink className="nav-link" to="/order">MyOrders</NavLink>}
                     </li>
                     <li className="nav-item">
-                        {isUserLoggedIn && <NavLink className="nav-link" to="/users">Users</NavLink>}
+                        {isUserLoggedIn && <NavLink className="nav-link" to="/admin/users">Users</NavLink>}
+                    </li>
+                    <li className="nav-item">
+                        {isUserLoggedIn && <NavLink className="nav-link" to="/admin/cuisine">AdminCuisine</NavLink>}
+                    </li>
+                    <li className="nav-item">
+                        {isUserLoggedIn && <NavLink className="nav-link" to="/admin/menu">AdminMenu</NavLink>}
                     </li>
                     <li className="nav-item">
                         <NavLink className="nav-link" to="/help">Help</NavLink>
@@ -34,6 +40,7 @@ export default function Nav() {
                     <li className="nav-item">
                         <NavLink className="nav-link" to="/about">About</NavLink>
                     </li>
+
                 </ul>
 
                 <ul className="navbar-nav navbar-collapse justify-content-end">
